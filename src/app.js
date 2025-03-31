@@ -15,14 +15,15 @@ window.onload = function() {
   let noun = ['jogger', 'racoon'];
 
   const dominio = () => {
+    let dominios = [];
     for (let pro of pronoun){
         for(let adj of adjetivo){
           for(let n of noun){
-            return `${pro}${adj}${n}.com`
+            dominios += `${pro}${adj}${n}.com<br>`;
           }
         }
-    }
-  }
+    } return dominios
+  };
 
   let dom = document.querySelector(".dominio")
   dom.innerHTML = dominio()
